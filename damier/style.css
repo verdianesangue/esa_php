@@ -1,0 +1,29 @@
+table{
+    display: flex;
+    
+}
+table .damier{
+    align-items: center;
+}
+.damier {
+    width: 500px;
+    height: 500px;
+    
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+.damier td {
+    width: 55px;
+    height: 55px;
+    border: 1px black solid;
+}
+
+.noir {
+    background-color: black;
+}
+
+.blanc {
+    background-color: white;
+}
