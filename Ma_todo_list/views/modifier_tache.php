@@ -13,8 +13,8 @@ if (isset($_GET['task']) && isset($_GET['nom']) && isset($_GET['status'])) {
     $nouvelle_tache = ['nom' => $_GET['nom'], 'status' => $_GET['status']];
 
     if (edit_tache($index, $nouvelle_tache, $file)) {
-        $_SESSION['message'] = 'Action éffectuée avec succès!';
-        header("Location: listes_taches.php");
+        $_SESSION['message'] = 'Tâche modifier avec succès!';
+        header("Location: ../index.php");
     } else {
         echo "Erreur lors de la modification de la tâche.";
     }

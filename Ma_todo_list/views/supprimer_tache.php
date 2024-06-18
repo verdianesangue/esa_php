@@ -6,8 +6,8 @@ if (isset($_POST['task'])) {
     $index = $_POST['task'];
 
     if (delete_tache($index, $file)) {
-        $_SESSION['message'] = 'Action éffectuée avec succès!';
-        header("Location: listes_taches.php");
+        $_SESSION['message'] = 'Tâche supprimer avec succès!';
+        header("Location: ../index.php");
     } else {
         echo "Erreur lors de la suppression de la tâche.";
     }

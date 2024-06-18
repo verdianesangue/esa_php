@@ -1,5 +1,7 @@
-<?php 
-require 'layout/head.php';?>
+<?php
+require 'layout/head.php';
+?>
+
 <form action="../controllers/ajout.php" method="post">
     <label for="nom">Nom</label>
     <input type="text" placeholder="Entrez le nom de la tache" id="nom" name="nom" required>
