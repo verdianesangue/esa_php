@@ -4,6 +4,7 @@ $file = '../controllers/todos.csv';
 
 if (isset($_POST['task'])) {
     $index = $_POST['task'];
+    
 
     if (toggle_tache($index, $file)) {
         $_SESSION['message'] = 'Status modifier avec succès!';
@@ -11,4 +12,5 @@ if (isset($_POST['task'])) {
     } else {
         echo "Erreur lors de la modification du statut de la tâche.";
     }
+    
 }

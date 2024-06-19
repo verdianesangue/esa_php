@@ -3,7 +3,7 @@ require 'controllers/function.php';
 $file = 'controllers/todos.csv';
 $taches = getTodos($file);
 ?>
-<h1>Liste des tâches</h1>
+<h2>Liste des tâches</h2>
 
 <table>
     <tr>
@@ -15,7 +15,7 @@ $taches = getTodos($file);
         <?php
         if (!empty($taches)): ?>
             <?php foreach ($taches as $index => $tache): ?>
-                <tr>
+                <tr class="task-container <?php echo ($tache['status'] === 'realiser') ? 'task-completed' : ''; ?>" style="<?php echo ($tache['status'] === 'realiser') ? 'text-decoration: line-through; color: grey;' : ''; ?>">
                     <td><?php echo $tache['nom']; ?></td>
                     <td><?php echo htmlspecialchars($tache['status'], ENT_QUOTES, 'UTF-8'); ?></td>
                     <td>
