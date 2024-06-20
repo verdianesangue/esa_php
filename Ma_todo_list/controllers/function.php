@@ -58,10 +58,10 @@ function toggle_tache($index, $file) {
     $taches = getTodos($file);
 
     if (isset($taches[$index])) {
-        // Alterner le statut de la tâche
-        $taches[$index]['status'] = ($taches[$index]['status'] === 'realiser') ? 'non realiser' : 'realiser';
+        $taches[$index]['status'] = ($taches[$index]['status'] === 'terminer') ? 'non terminer' : 'terminer';
         saveTodos($taches, $file);
         return true;
     }
+    
     return false;
 }

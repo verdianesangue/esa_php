@@ -5,8 +5,12 @@ require '../controllers/function.php';
 $file = '../controllers/todos.csv';
 
 $taches = getTodos($file);
-$selectedTask = null;
-$taskIndex = null;
+$tache_selectionner = null;
+$index_tache = null;
+if (isset($_GET['task'])) {
+    $index_tache = $_GET['task'];
+    $tache_selectionner = $taches[$index_tache];
+}
 
 if (isset($_GET['task']) && isset($_GET['nom']) && isset($_GET['status'])) {
     $index = $_GET['task'];
@@ -27,11 +31,12 @@ if (isset($_GET['task']) && isset($_GET['nom']) && isset($_GET['status'])) {
     <label for="nom">Nom:</label>
     <input type="text" id="nom" name="nom" value="<?php echo $taches[$_GET['task']]['nom']; ?>">
     <label for="status">Status:</label>
-    <select name="status" id="status" value="<?php echo $taches[$_GET['task']]['status']; ?>">
-        <option value="realiser">realiser</option>
-        <option value="non realiser">non realiser</option>
+    <select id="status" name="status" required>
+            <option value="non terminer" <?php if ($tache_selectionner['status'] == 'non  terminer') echo 'selected'; ?>>non terminer</option>
+            <option value="terminer" <?php if ($tache_selectionner['status'] == 'terminer') echo 'selected'; ?>>terminer</option>
     </select>
     <input type="submit" value="Modifier">
+    <li><a href="../index.php">retour</a></li>
 </form>
 
 <?php
