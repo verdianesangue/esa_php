@@ -1,0 +1,35 @@
+nav ul{
+   list-style: none;
+}
+nav ul li a{
+   border: 2px; 
+   background-color: darkorchid; 
+   padding: 8px ;
+   text-decoration: none ;
+   color: white; font-weight: 1em; 
+   border-radius: 0.5em;
+  
+  
+}
+.liste{
+   padding-top: 1em;
+   display: flex;
+   flex-direction: row;
+   justify-items: center;
+   align-items: center;
+  
+}
+.main{
+   padding-top: 1em;
+   padding-bottom: 1em;
+  
+}
+.ib{
+   display: flex;
+   flex-direction: row;
+   justify-items: center;
+   align-items: center;
+   gap: 2em;
+}
+
+

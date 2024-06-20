@@ -3,13 +3,13 @@ require 'controllers/function.php';
 $file = 'controllers/todos.csv';
 $taches = getTodos($file);
 ?>
-<h2>Liste des tâches</h2>
+<h2 class="liste"><img src="/views/images/list.png" alt="">Liste des tâches</h2>
 
 <table>
     <tr>
         <th>Nom de la tache</th>
         <th>Status</th>
-        <th colspan="2">Action</th>
+        <th>Action</th>
     </tr>
     <tbody>
         <?php
